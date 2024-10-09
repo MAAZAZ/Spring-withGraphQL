@@ -34,12 +34,12 @@ mutation remove{
 removeProduct(id: 50)
 }
 
-mutation addParms($n: String, $p: Float, $c: String, $q: Int, x: Float) {
+mutation addParms($n: String, $p: Float, $c: String, $q: Int, $x: Float) {
     addProduct( product : {
     name: $n,
     price: $p,
     currency: $c,
     quantity: $q,
-    categoryId: x
+    categoryId: $x
     }) {  id, name }
 }
